@@ -1,7 +1,6 @@
 package org.springframework.social.stackoverflow.connect;
 
 import org.springframework.social.oauth2.AbstractOAuth2ServiceProvider;
-import org.springframework.social.oauth2.OAuth2Template;
 import org.springframework.social.stackoverflow.api.StackOverflow;
 import org.springframework.social.stackoverflow.api.impl.StackOverflowTemplate;
 
@@ -14,7 +13,7 @@ import org.springframework.social.stackoverflow.api.impl.StackOverflowTemplate;
 public class StackOverflowServiceProvider extends AbstractOAuth2ServiceProvider<StackOverflow> {
 
 	public StackOverflowServiceProvider(String clientId, String clientSecret) {
-		super(new OAuth2Template(clientId, clientSecret, "https://github.com/login/oauth/authorize", "https://github.com/login/oauth/access_token"));
+		super(new StackOverflowOAuth2Template(clientId, clientSecret, "https://stackexchange.com/oauth", "https://stackexchange.com/oauth/access_token"));
 	}
 
 	@Override

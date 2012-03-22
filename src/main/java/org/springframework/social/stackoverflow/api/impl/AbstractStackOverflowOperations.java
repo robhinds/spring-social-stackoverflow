@@ -23,6 +23,8 @@ public class AbstractStackOverflowOperations {
 	}
 
 	protected String buildUri(String path) {
+		// return
+		// "https://api.stackexchange.com/2.0/users/258813?site=stackoverflow";
 		return API_URL_BASE + path + API_SO_FILTER;
 	}
 
